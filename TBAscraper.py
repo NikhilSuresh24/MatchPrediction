@@ -2,7 +2,7 @@ import tbapy
 TBA_KEY = "pfAELfi9W9zr4ONbwppQMNFmeaQbOMjeTo6liUiDlJSJGcvUYxIWXF5C4zdJxHYT"
 
 
-def Scrape(tba_key: str, year : int, event_name : str, match_num : int, match_type='qm', round=None):
+def scrape_match(tba_key: str, year : int, event_name : str, match_num : int, match_type='qm', round=None):
     tba = tbapy.TBA(TBA_KEY)
     event_key = ''
     red_data = []
@@ -26,5 +26,5 @@ def Scrape(tba_key: str, year : int, event_name : str, match_num : int, match_ty
     return red_data, blue_data
 
 
-red, blue = Scrape(TBA_KEY, 2018, "Silicon Valley Regional", 2, 'sf', 1)
+red, blue = scrape_match(TBA_KEY, 2018, "Silicon Valley Regional", 2, 'sf', 1)
 
