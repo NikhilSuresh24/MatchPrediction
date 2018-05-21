@@ -1,6 +1,7 @@
 import tbapy
 TBA_KEY = "pfAELfi9W9zr4ONbwppQMNFmeaQbOMjeTo6liUiDlJSJGcvUYxIWXF5C4zdJxHYT"
 
+
 def Scrape(tba_key: str, year : int, event_name : str, match_num : int, match_type='qm', round=None):
     tba = tbapy.TBA(TBA_KEY)
     event_key = ''
