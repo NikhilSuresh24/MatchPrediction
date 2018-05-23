@@ -6,8 +6,8 @@ Data is scraped from [The Blue Alliance](https://www.thebluealliance.com). Input
 
 Output data is a 1 x 2 `(1, number of alliances)` vector with the score of each alliance in a match.
    
-# Network Architecture
-Not sure yet 
+# Architecture
+The main program will be a Bayesian regression, but will be compared the results of a simple linear, fully-connected neural network. 
 
 # Validation
-Trained Network is validated using [10-fold cross validation](https://www.openml.org/a/estimation-procedures/1). Data from many completed matches comprises the dataset.
+Bayesian Regression will be validated using uncertainty estimates. Linear Network is validated using [10-fold cross validation](https://www.openml.org/a/estimation-procedures/1). Data from many completed matches comprises the dataset. 

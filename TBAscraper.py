@@ -26,5 +26,5 @@ def scrape_match(tba_key: str, year : int, event_name : str, match_num : int, ma
     return red_data, blue_data
 
 
-red, blue = scrape_match(TBA_KEY, 2018, "Silicon Valley Regional", 2, 'sf', 1)
-
+red, blue = scrape_match(TBA_KEY, 2017, "Silicon Valley Regional", 2, 'sf', 1)
+print(red)
