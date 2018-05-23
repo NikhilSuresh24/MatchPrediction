@@ -11,3 +11,9 @@ The main program will be a Bayesian regression, but will be compared the results
 
 # Validation
 Bayesian Regression will be validated using uncertainty estimates. Linear Network is validated using [10-fold cross validation](https://www.openml.org/a/estimation-procedures/1). Data from many completed matches comprises the dataset. 
+
+# Dependencies
+Install the [Tbapy](https://github.com/frc1418/tbapy/blob/master/README.md) module to scrape The Blue Alliance
+```pip3 install tbapy```
+Install Pyro for stochastic variational inference. Requires PyTorch. 
+```pip3 install pyro-ppl```
