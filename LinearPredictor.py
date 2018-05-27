@@ -14,7 +14,9 @@ import numpy as np
 use_cuda = torch.cuda.is_available()
 
 #from https://discuss.pytorch.org/t/list-of-nn-module-in-a-nn-module/219/2
+# to support n-dimensional linear network
 class ListModule(nn.Module):
+    '''allows Lists of torch.nn.Modules to be treated as torch.nn.Modules. This allows for backpropagation.'''
     def __init__(self, *args):
         super(ListModule, self).__init__()
         idx = 0
@@ -37,6 +39,7 @@ class ListModule(nn.Module):
         return len(self._modules)
 
 class Net(nn.Module):
+    '''N-dimensional linear network that takes in a list of ints, which represent the number of nodes for each hidden layer, and an input_size, which depends on the shape of the flattened input. The network converges to one output node.'''
     def __init__(self, input_size : int, hidden_sizes : list):
         super(Net, self).__init__()
         self.input_size = input_size
