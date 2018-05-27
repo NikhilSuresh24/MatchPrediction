@@ -1,4 +1,4 @@
-
+# ALL TBA SCRAPING
 import tbapy
 import numpy as np
 from tqdm import tqdm
@@ -26,9 +26,6 @@ def scrape_match(tba_key: str, year : int, event_name : str, match_num : int, ma
 		blue_data.append(team_data)
 
 	return red_data, blue_data
-
-
-# s
 
 def make_dataset(tba_key : str, year : int, saveFile : str):
 	tba = tbapy.TBA(TBA_KEY)
@@ -61,10 +58,4 @@ TBA_KEY = "pfAELfi9W9zr4ONbwppQMNFmeaQbOMjeTo6liUiDlJSJGcvUYxIWXF5C4zdJxHYT"
 year = 2018
 saveFile = "matchData.npy"
 
-# make_dataset(TBA_KEY, year, saveFile)
-# x = np.load('matchData.npy.npz')
-# print(x['y'])
-tba = tbapy.TBA(TBA_KEY)
-x = tba.team_status('frc4904','2018casj')
-print(x)
-# print(tba.event_matches(event.key))
+make_dataset(TBA_KEY, year, saveFile)
