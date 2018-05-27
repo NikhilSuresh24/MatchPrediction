@@ -10,7 +10,7 @@ Output data is a 1 x 2 `(1, number of alliances)` vector with the score of each 
 The main program will be a Bayesian regression, but will be compared the results of a simple linear, fully-connected neural network. 
 
 ## Validation
-Bayesian Regression will be validated using uncertainty estimates. Linear Network is validated using [10-fold cross validation](https://www.openml.org/a/estimation-procedures/1). Data from many completed matches comprises the dataset. 
+Bayesian Regression will be validated using uncertainty estimates from the guide distribution, which approximates the posterior distribution. Point Evaluation will also be performed with the Mean Squared Error Loss Function on a test dataset. Linear Network is validated using [10-fold cross validation](https://www.openml.org/a/estimation-procedures/1). Data from many completed matches comprises the dataset. 
 
 ## Dependencies
 Install the [Tbapy](https://github.com/frc1418/tbapy/blob/master/README.md) module to scrape The Blue Alliance
